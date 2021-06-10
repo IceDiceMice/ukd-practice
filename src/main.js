@@ -45,8 +45,8 @@ useEffect(() => {
            </header>
            </div>
            <div className="header-body">
-               <Link to="/posts"><h1 className="options">Posts</h1></Link>
-               <Link to="/users"><h1 className="options">Users</h1></Link>
+               <Link to="/posts" className="links"><h1 >Posts</h1></Link>
+               <Link to="/users" className="links"><h1 >Users</h1></Link>
                </div>
            
       </>

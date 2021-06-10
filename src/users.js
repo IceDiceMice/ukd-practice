@@ -71,54 +71,59 @@ setData(users)
 
 console.log(data)
     return (
-        <div>
+        <>
         <Main />
+        <div className="users-buttons">
 <button onClick={sortByIdUp}>Сортування з кінця по id</button>
 <button onClick={sortByIdDown}>Сортування з початку по Id</button><br/>
 <button onClick={sortByNameUp}>Сортування з кінця  по name</button>
 <button onClick={sortByNameDown}>Сортування з початку по name</button>
+</div>
+<div className="users-wraper">
          { data.map((user)=>{
+          
           if(sortId==false) {return(
-           <p>
-           email={user.email}     
-              id={user.id}             
-              name={user.name}             
-              phone={user.phone}            
-              username={user.username}           
-              website={user.website} 
-              </p> )
+           <div className="users-field">
+           <p>Email: {user.email} </p>    
+             <p>Id: {user.id}  </p>           
+             <p>Name: {user.name}  </p>           
+              <p>Phone: {user.phone}  </p>          
+              <p>Username: {user.username} </p>          
+             <p>Website: {user.website} </p>
+              </div> )
           } 
           else if(sortId){
-              return(<p>
-           email={user.email}     
-              id={user.id}             
-              name={user.name}             
-              phone={user.phone}            
-              username={user.username}           
-              website={user.website} 
-              </p>)
+              return(<div className="users-field">
+              <p>Email: {user.email} </p>    
+             <p>Id: {user.id}  </p>           
+             <p>Name: {user.name}  </p>           
+              <p>Phone: {user.phone}  </p>          
+              <p>Username: {user.username} </p>          
+             <p>Website: {user.website} </p>
+              </div>)
           }  else if(sortName==false || sortId){
-              return(<p>
-           email={user.email}     
-              id={user.id}             
-              name={user.name}             
-              phone={user.phone}            
-              username={user.username}           
-              website={user.website} 
-              </p>)
+              return(<div className="users-field">
+              <p>Email: {user.email} </p>    
+             <p>Id: {user.id}  </p>           
+             <p>Name: {user.name}  </p>           
+              <p>Phone: {user.phone}  </p>          
+              <p>Username: {user.username} </p>          
+             <p>Website: {user.website} </p>
+              </div>)
           }  else if(sortName || sortId){
-              return(<p>
-           email={user.email}     
-              id={user.id}             
-              name={user.name}             
-              phone={user.phone}            
-              username={user.username}           
-              website={user.website} 
-              </p>)
+              return(<div className="users-field">
+              <p>Email: {user.email} </p>    
+             <p>Id: {user.id}  </p>           
+             <p>Name: {user.name}  </p>           
+              <p>Phone: {user.phone}  </p>          
+              <p>Username: {user.username} </p>          
+             <p>Website: {user.website} </p>
+              </div>)
           }
           
               })}
-        </div>
+              </div>
+        </>
     )
 }
 export default Users;

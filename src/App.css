@@ -30,9 +30,7 @@
  flex-wrap: wrap;
 
 }
-.options{
-text-decoration: none;
-}
+
 .login-form{
  padding: 10px;
     height: 300px;
@@ -60,4 +58,77 @@ border: none;
         border: none; 
         color:white;
     }
+    .users-field{
+        color:white;
+        background-color:rgb(10, 10, 32);  
+        width: 300px;
+        padding: 5px;
+        margin: 10px;
+  
+    }
+    .users-wraper{
+        display: flex;
+        align-items:flex-end;
+  padding-right: 160px;
+    flex-direction: column-reverse;
+    }
+    .users-buttons{
+        display:flex;
+        width: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+    .users-buttons > button{
+        margin: 10px;
+        height: 50px;
+        width: 120px;
+        border: none;
+        color:white;
+        background-color:rgb(93, 93, 214);
+    }
+    .users-buttons > button:active{
+        border: 2px solid black;  
+    }
+    .links{
+        text-decoration: none;
+    }
+    .form-control>textarea{
+        width: 550px;
+        height: 200px;
+        color:white;
+        background-color:rgb(10, 10, 32);  
+        border: none;
+        padding: 15px;
+    }
+
+    .form{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+    .form>button{
+        border: none;
+        color:white;
+        background-color:rgb(93, 93, 214);
+        height: 30px;
+        width: 60px;
+    }
+    .item{
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 50px;
+        margin-top: 20px;
+        color: rgb(10, 10, 32);
+    }
+    .item>button{
+        border: none;
+        color:white;
+        background-color:rgb(93, 93, 214);
+        height: 30px;
+        width: 60px;  
+    }
+
   

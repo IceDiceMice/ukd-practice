@@ -9,11 +9,13 @@ import {Provider} from 'react-redux';
 const store = createStore(loginReducer) 
 
 ReactDOM.render(
+  <div className="wraper">
   <React.StrictMode>
   <Provider store={store}>
     <App />
     </Provider> 
-  </React.StrictMode>,
+  </React.StrictMode>
+  </div>,
   document.getElementById('root')
 );
 

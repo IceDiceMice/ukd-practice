@@ -51,7 +51,7 @@ const Posts = () => {
               <div className='item' key={id}>
          
                 <p>{text}</p>
-                <button onClick={() => removeItem(id)}>remove</button>
+                <button onClick={() => removeItem(id)}>Remove</button>
               </div>
             );
           })}
