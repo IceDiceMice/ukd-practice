@@ -76,16 +76,15 @@ console.log(data)
         <div className="users-buttons">
 <button onClick={sortByIdUp}>Сортування з кінця по id</button>
 <button onClick={sortByIdDown}>Сортування з початку по Id</button><br/>
-<button onClick={sortByNameUp}>Сортування з кінця  по name</button>
-<button onClick={sortByNameDown}>Сортування з початку по name</button>
+<button onClick={sortByNameUp}>Сортування з початку по name</button>
+<button onClick={sortByNameDown}>Сортування з кінця по name</button>
 </div>
 <div className="users-wraper">
          { data.map((user)=>{
           
           if(sortId==false) {return(
            <div className="users-field">
-           <p>Email: {user.email} </p>    
-             <p>Id: {user.id}  </p>           
+           <p>Email: {user.email} </p>              
              <p>Name: {user.name}  </p>           
               <p>Phone: {user.phone}  </p>          
               <p>Username: {user.username} </p>          
@@ -94,8 +93,7 @@ console.log(data)
           } 
           else if(sortId){
               return(<div className="users-field">
-              <p>Email: {user.email} </p>    
-             <p>Id: {user.id}  </p>           
+              <p>Email: {user.email} </p>             
              <p>Name: {user.name}  </p>           
               <p>Phone: {user.phone}  </p>          
               <p>Username: {user.username} </p>          
@@ -103,8 +101,7 @@ console.log(data)
               </div>)
           }  else if(sortName==false || sortId){
               return(<div className="users-field">
-              <p>Email: {user.email} </p>    
-             <p>Id: {user.id}  </p>           
+              <p>Email: {user.email} </p>             
              <p>Name: {user.name}  </p>           
               <p>Phone: {user.phone}  </p>          
               <p>Username: {user.username} </p>          
@@ -112,8 +109,7 @@ console.log(data)
               </div>)
           }  else if(sortName || sortId){
               return(<div className="users-field">
-              <p>Email: {user.email} </p>    
-             <p>Id: {user.id}  </p>           
+              <p>Email: {user.email} </p>            
              <p>Name: {user.name}  </p>           
               <p>Phone: {user.phone}  </p>          
               <p>Username: {user.username} </p>          
