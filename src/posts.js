@@ -1,12 +1,21 @@
 import React, {useState} from 'react'
-
+import Main from './main'
 const Posts = () => {
-    const [firstName, setFirstName] = useState('');
-    const [posts, setPosts] = useState([]);
+    const [text, setFirstName] = useState('');
+    const [posts, setPosts] = useState([{
+        id:1,
+        text:'newPost1'},
+        {
+            id:2,
+            text:'newPost2'},
+            {
+                id:3,
+                text:'newPost3'}
+            ]);
   
     const handleSubmit = (e) => {
       e.preventDefault();
-        const post = { id: new Date().getTime().toString(), firstName};
+        const post = { id: new Date().getTime().toString(), text};
         console.log(post);
         setPosts((posts) => {
           return [ post, ...posts];
@@ -18,27 +27,30 @@ const Posts = () => {
         setPosts(newPost);
       };
     return (
+        
       <>
+      <Main />
         <article>
           <form className='form' onSubmit={handleSubmit}>
             <div className='form-control'>
               <textarea
                 type='text'
-                id='firstName'
-                name='firstName'
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}>
+                id='text'
+                name='text'
+                value={text}
+                onChange={(e) => setFirstName(e.target.value)}
+                required>
                 </textarea>
             </div>
        
             <button type='submit'>Submit</button>
           </form>
           {posts.map((post) => {
-            const { id, firstName} = post;
+            const { id, text} = post;
             return (
               <div className='item' key={id}>
-                <p>{id}</p>
-                <p>{firstName}</p>
+         
+                <p>{text}</p>
                 <button onClick={() => removeItem(id)}>remove</button>
               </div>
             );

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-
+import Main from './main'
 const Users = () =>{
     const [data, setData] = useState([])
     const [sortId, setSortId] = useState(false)
@@ -72,6 +72,7 @@ setData(users)
 console.log(data)
     return (
         <div>
+        <Main />
 <button onClick={sortByIdUp}>Сортування з кінця по id</button>
 <button onClick={sortByIdDown}>Сортування з початку по Id</button><br/>
 <button onClick={sortByNameUp}>Сортування з кінця  по name</button>
