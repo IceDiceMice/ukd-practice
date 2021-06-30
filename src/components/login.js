@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AddItem } from "../actions/types";
 import { Redirect } from "react-router-dom";
@@ -10,17 +10,15 @@ export default function Login() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (state.trim()) {
       dispatch({
         type: AddItem,
         payload: state,
       });
     }
-  }, [state]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
     if (text !== "") {
       setRedirect(true);
     }

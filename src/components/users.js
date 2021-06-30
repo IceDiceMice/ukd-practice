@@ -86,7 +86,7 @@ const Users = () => {
       <div className="users-wraper">
         {data.map((user) => {
           return (
-            <div className="users-field">
+            <div className="users-field" key={user.id}>
               <p>Email: {user.email} </p>
               <p>Name: {user.name} </p>
               <p>Phone: {user.phone} </p>

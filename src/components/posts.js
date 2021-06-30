@@ -7,7 +7,6 @@ const Posts = () => {
 
   const posts = useSelector((state) => state.postsReducer);
   const dispatch = useDispatch();
-  console.log(posts);
 
   const handleSubmit = (e) => {
     e.preventDefault();

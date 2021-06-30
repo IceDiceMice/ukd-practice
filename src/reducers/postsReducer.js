@@ -1,4 +1,3 @@
-
 const initialState = {
   post: [
     { id: 1, text: "newPost1" },
@@ -15,7 +14,7 @@ const postsReducer = (state = initialState, action) => {
       return { ...state, post: [payload, ...state.post] };
 
     case "deletePost":
-      return {...state, post: state.post.filter((post) => post.id !== id)};
+      return { ...state, post: state.post.filter((post) => post.id !== id) };
     default:
       return state;
   }
