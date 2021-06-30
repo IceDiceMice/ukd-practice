@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'redux';
-import {loginReducer} from './reducer';
+import store from './store'
 import {Provider} from 'react-redux';
-const store = createStore(loginReducer) 
 
 ReactDOM.render(
   <div className="wraper">

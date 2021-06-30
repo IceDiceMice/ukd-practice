@@ -1,41 +1,33 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import './App.css';
-import Login from "./login"
-import Main from "./main"
-import Users from "./users"
-import Posts from "./posts"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./components/login";
+import Main from "./components/main";
+import Users from "./components/users";
+import Posts from "./components/posts";
 
 function App() {
   return (
     <Router>
-        <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
+      <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
 
-          <Route path="/main">
-            <Main />
-          </Route>
+        <Route path="/main">
+          <Main />
+        </Route>
 
         <Route path="/users">
-        <Users />
+          <Users />
         </Route>
 
         <Route path="/posts">
           <Posts />
-          </Route>
-
-        </Switch>
- 
+        </Route>
+      </Switch>
     </Router>
   );
- 
 }
 
 export default App;
