@@ -21,10 +21,6 @@ export default function Main() {
       type: AddItem,
       payload: "",
     });
-
-    if (!text) {
-      setRedirect(true);
-    }
   };
 
   if (redirect) {
