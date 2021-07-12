@@ -1,4 +1,6 @@
-1) Організував код
-2) Виніс певний код в окремі файли і додав нові папки
-3) Переробив сторінку з сортуванням 
-4) Перероробив сторінку з постами, додавши туди редакс
+1) Code was organized
+2) Created and added some new directories and files 
+3) Sort page was reworked
+4) Post page was reworked by adding redux
+5) Added scss
+6) Console was cleared

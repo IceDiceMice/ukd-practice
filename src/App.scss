@@ -1,0 +1,136 @@
+$button-color: rgb(93, 93, 214); 
+$bg-color: rgb(10, 10, 32);
+* {
+  box-sizing: border-box;
+}
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+.exit-button {
+  border: none;
+  color: white;
+  background-color: $button-color;
+  height: 30px;
+  width: 60px;
+  margin-right: 10px;
+  &:active {
+    border: 1px solid black;
+  }
+}
+.header-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.login-form {
+  padding: 10px;
+  height: 300px;
+  width: 300px;
+  border: 2px solid $button-color;
+  color: white;
+  background-color: $bg-color;
+  padding-top: 40px;
+  input {
+    height: 25px;
+    border: none;
+  }
+  button {
+    height: 25px;
+    background-color: $button-color;
+    border: none;
+    color: white;
+  }
+}
+.login-body {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.users-field {
+  color: white;
+  background-color: $bg-color;
+  width: 300px;
+  padding: 5px;
+  margin: 10px;
+}
+.users-wraper {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 160px;
+  flex-direction: column-reverse;
+}
+.users-buttons {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 50px;
+  button {
+    margin: 10px;
+    height: 50px;
+    width: 120px;
+    border: none;
+    color: white;
+    background-color: $button-color;
+    &:active {
+      border: 2px solid black;
+    }
+  }
+}
+
+.links {
+  text-decoration: none;
+}
+.form-control {
+  textarea {
+  width: 550px;
+  height: 200px;
+  color: white;
+  background-color: $bg-color;
+  border: none;
+  padding: 15px;
+}}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 50px;
+  button {
+    border: none;
+    color: white;
+    background-color: $button-color;
+    height: 30px;
+    width: 60px;
+  }
+}
+
+.item {
+  width: 100%;
+  align-items: flex-start;
+  padding-left: 50px;
+  margin-top: 20px;
+  color: $bg-color;
+  button {
+    border: none;
+    color: white;
+    background-color: $button-color;
+    height: 30px;
+    width: 60px;
+  }
+}
+
